@@ -1,0 +1,171 @@
+/* ==========================================
+   Hari Krushna Solar & Rooftop
+   Main Stylesheet
+   Version : 1.0
+========================================== */
+
+/* Google Design System */
+
+:root{
+
+    /* Colors */
+    --primary:#0A3D91;
+    --primary-dark:#072C69;
+    --secondary:#FFC107;
+
+    --white:#ffffff;
+    --black:#111827;
+
+    --text:#4B5563;
+    --light:#F8FAFC;
+    --border:#E5E7EB;
+
+    /* Container */
+    --container:1200px;
+
+    /* Radius */
+    --radius:16px;
+
+    /* Shadow */
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    /* Transition */
+    --transition:.35s ease;
+
+}
+
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--white);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+
+    font-family:'Poppins',sans-serif;
+
+    color:var(--black);
+
+}
+
+
+/* Layout */
+
+.container{
+
+    width:min(var(--container),92%);
+
+    margin:auto;
+
+}
+
+section{
+
+    padding:100px 0;
+
+}
+
+
+/* Buttons */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 30px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+}
+
+.btn-secondary{
+
+    background:var(--secondary);
+
+    color:#111827;
+
+}
+
+
+/* Typography */
+
+.section-title{
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.section-subtitle{
+
+    font-size:18px;
+
+    color:var(--text);
+
+    max-width:700px;
+
+}
