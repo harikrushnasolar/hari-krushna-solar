@@ -298,3 +298,43 @@ min-width:220px;
 }
 
 }
+
+/* ==========================
+   Desktop
+========================== */
+
+@media (min-width:992px){
+
+    .mobile-menu{
+
+        display:none !important;
+
+    }
+
+    .mobile-toggle{
+
+        display:none !important;
+
+    }
+
+    .menu-overlay{
+
+        display:none !important;
+
+    }
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:991px){
+
+    .mobile-toggle{
+
+        display:flex !important;
+
+    }
+
+}
