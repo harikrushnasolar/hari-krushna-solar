@@ -777,57 +777,7 @@
 .header.sticky{
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
-/* ==========================
-   MOBILE MENU
-========================== */
 
-.menu-toggle{
-
-    display:none;
-
-    font-size:28px;
-
-    cursor:pointer;
-
-    color:#0A3D91;
-
-}
-
-@media(max-width:991px){
-
-    .menu-toggle{
-
-        display:block;
-
-    }
-
-    .nav-links{
-
-        display:none;
-
-        width:100%;
-
-        flex-direction:column;
-
-        background:#fff;
-
-        padding:25px;
-
-        border-radius:15px;
-
-        margin-top:20px;
-
-        box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    }
-
-    .nav-links.active{
-
-        display:flex;
-
-    }
-
-}
 /* ==========================
    GOOGLE REVIEWS
 ========================== */
@@ -1016,4 +966,310 @@
 .cta .btn-secondary{
     background:#FFC107;
     color:#111827;
+}
+/* ==========================================
+   PREMIUM MOBILE NAVBAR
+========================================== */
+
+@media (max-width:991px){
+
+.topbar{
+display:none;
+}
+
+.header{
+position:sticky;
+top:0;
+background:#fff;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:70px;
+    padding:10px 18px;
+}
+
+.logo img{
+width: 55px;
+}
+
+.mobile-menu-btn{
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+cursor:pointer;
+color:#0A3D91;
+z-index:1002;
+}
+
+.header-buttons{
+display:none;
+}
+
+nav{
+margin:0;
+padding:0;
+}
+
+.nav-links{
+    width:75%;
+    max-width:280px;
+
+position:fixed;
+
+top:0;
+
+right:-100%;
+
+width:280px;
+
+height:100vh;
+
+background:#fff;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-start;
+
+align-items:flex-start;
+
+padding:90px 30px;
+
+gap:22px;
+
+transition:.35s;
+
+box-shadow:-10px 0 30px rgba(0,0,0,.12);
+
+z-index:1001;
+
+}
+
+.nav-links.active{
+right:0;
+}
+
+.nav-links li{
+width:100%;
+list-style:none;
+}
+
+.nav-links a{
+display:block;
+width:100%;
+font-size:20px;
+font-weight:600;
+padding:8px 0;
+color:#0A3D91;
+}
+
+.menu-overlay{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.45);
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.35s;
+
+z-index:1000;
+
+}
+
+.menu-overlay.active{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+}
+
+/* ==========================================
+   HEADER REBUILD
+========================================== */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:#fff;
+    box-shadow:0 6px 20px rgba(0,0,0,.06);
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:85px;
+}
+
+.logo img{
+    width:70px;
+}
+
+.desktop-nav .nav-links{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+.desktop-nav .nav-links a{
+    color:#111827;
+    font-weight:600;
+    transition:.3s;
+}
+
+.desktop-nav .nav-links a:hover{
+    color:#0A3D91;
+}
+
+.mobile-toggle{
+    display:none;
+    background:none;
+    border:none;
+    font-size:30px;
+    color:#0A3D91;
+    cursor:pointer;
+}
+
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:280px;
+    height:100vh;
+    background:#fff;
+    padding:90px 30px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    transition:.35s ease;
+    z-index:1001;
+    box-shadow:-10px 0 30px rgba(0,0,0,.15);
+}
+
+.mobile-menu.active{
+    right:0;
+}
+
+.mobile-menu a{
+    color:#111827;
+    font-size:18px;
+    font-weight:600;
+}
+
+.menu-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+    z-index:1000;
+}
+
+.menu-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+@media (max-width:991px){
+
+    .topbar{
+        display:none;
+    }
+
+    .desktop-nav,
+    .header-buttons{
+        display:none;
+    }
+
+    .mobile-toggle{
+        display:block;
+    }
+
+    .navbar{
+        height:75px;
+    }
+
+    .logo img{
+        width:60px;
+    }
+
+}
+
+/* ==========================
+   MOBILE MENU
+========================== */
+
+.close-menu{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:none;
+    border:none;
+    font-size:28px;
+    color:#0A3D91;
+    cursor:pointer;
+}
+
+.mobile-menu{
+    overflow-y:auto;
+}
+
+.mobile-menu a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px 0;
+    color:#111827;
+    font-size:18px;
+    font-weight:600;
+}
+
+.mobile-menu a i{
+    width:22px;
+    color:#0A3D91;
+}
+
+.mobile-actions{
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.mobile-actions .btn{
+    width:100%;
+}
+
+.mobile-contact{
+    margin-top:35px;
+    padding-top:25px;
+    border-top:1px solid #E5E7EB;
+}
+
+.mobile-contact p{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:12px 0;
+    color:#4B5563;
+    font-size:15px;
+}
+
+.mobile-contact i{
+    color:#0A3D91;
 }

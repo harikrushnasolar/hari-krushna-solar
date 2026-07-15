@@ -46,17 +46,6 @@ window.addEventListener("scroll", function(){
     }
 
 });
-/* Mobile Menu */
-
-const menuToggle = document.querySelector(".menu-toggle");
-
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click",()=>{
-
-    navLinks.classList.toggle("active");
-
-});
 /* ==========================
    COUNTER
 ========================== */
@@ -100,5 +89,36 @@ counters.forEach(counter => {
     };
 
     updateCounter();
+
+});
+
+const menuBtn = document.querySelector(".mobile-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const overlay = document.querySelector(".menu-overlay");
+const closeBtn = document.querySelector(".close-menu");
+
+function openMenu(){
+
+    mobileMenu.classList.add("active");
+    overlay.classList.add("active");
+
+}
+
+function closeMenu(){
+
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("active");
+
+}
+
+menuBtn.addEventListener("click", openMenu);
+
+closeBtn.addEventListener("click", closeMenu);
+
+overlay.addEventListener("click", closeMenu);
+
+document.querySelectorAll(".mobile-menu a").forEach(link=>{
+
+    link.addEventListener("click", closeMenu);
 
 });
