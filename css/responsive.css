@@ -247,3 +247,14 @@ min-width:220px;
 }
 
 }
+@media (max-width:991px){
+
+.projects-grid{
+    grid-template-columns:1fr;
+}
+
+.project-image img{
+    height:220px;
+}
+
+}

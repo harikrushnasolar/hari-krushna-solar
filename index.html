@@ -389,7 +389,7 @@
 
         <div class="services-grid">
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up">
 
                 <img src="images/icons/home.png" alt="Residential Solar">
 
@@ -403,7 +403,7 @@
 
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up">
 
                 <img src="images/icons/shop.png" alt="Commercial Solar">
 
@@ -417,7 +417,7 @@
 
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up">
 
                 <img src="images/icons/factory.png" alt="Industrial Solar">
 
@@ -570,29 +570,89 @@
 
         <div class="projects-grid">
 
-            <div class="project-card">
-                <img src="images/projects/project1.jpg" alt="Residential Solar Project">
-                <div class="project-content">
-                    <h3>Residential Rooftop</h3>
-                    <p>3.24 kW Solar System</p>
-                </div>
-            </div>
+            <div class="project-card" data-aos="fade-up">
 
-            <div class="project-card">
-                <img src="images/projects/project2.png" alt="Commercial Solar Project">
-                <div class="project-content">
-                    <h3>Commercial Solar</h3>
-                    <p>15 kW Solar System</p>
-                </div>
-            </div>
+    <div class="project-image">
 
-            <div class="project-card">
-                <img src="images/projects/project3.png" alt="Industrial Solar Project">
-                <div class="project-content">
-                    <h3>Industrial Solar</h3>
-                    <p>50 kW Solar System</p>
-                </div>
-            </div>
+        <img src="images/projects/project1.jpg" alt="Residential Solar Project">
+
+        <div class="project-overlay">
+
+            <a href="projects.html" class="btn btn-primary">View Project</a>
+
+        </div>
+
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-location">
+            <i class="fa-solid fa-location-dot"></i> Surat
+        </span>
+
+        <h3>Residential Rooftop</h3>
+
+        <p>3.24 kW Solar System</p>
+
+    </div>
+
+</div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+
+    <div class="project-image">
+
+        <img src="images/projects/project2.png" alt="Commercial Solar Project">
+
+        <div class="project-overlay">
+
+            <a href="projects.html" class="btn btn-primary">View Project</a>
+
+        </div>
+
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-location">
+            <i class="fa-solid fa-location-dot"></i> Gujarat
+        </span>
+
+        <h3>Commercial Solar</h3>
+
+        <p>15 kW Solar System</p>
+
+    </div>
+
+</div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+
+    <div class="project-image">
+
+        <img src="images/projects/project3.png" alt="Industrial Solar Project">
+
+        <div class="project-overlay">
+
+            <a href="projects.html" class="btn btn-primary">View Project</a>
+
+        </div>
+
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-location">
+            <i class="fa-solid fa-location-dot"></i> Gujarat
+        </span>
+
+        <h3>Industrial Solar</h3>
+
+        <p>50 kW Solar System</p>
+
+    </div>
+
+</div>
 
         </div>
 
@@ -846,32 +906,84 @@
 
         <div class="contact-form">
 
-            <form>
+            <form action="https://formsubmit.co/hksolar.rooftop@gmail.com" method="POST">
 
-                <input type="text" placeholder="Your Name" required>
+    <!-- FormSubmit Settings -->
 
-                <input type="tel" placeholder="Mobile Number" required>
+    <input type="hidden" name="_subject" value="New Solar Inquiry - Hari Krushna Solar">
 
-                <input type="email" placeholder="Email Address">
+    <input type="hidden" name="_captcha" value="false">
 
-                <select>
+    <input type="hidden" name="_template" value="table">
 
-                    <option>Select Requirement</option>
-                    <option>Residential Solar</option>
-                    <option>Commercial Solar</option>
-                    <option>Industrial Solar</option>
+    <input type="hidden" name="_next" value="https://harikrushnasolar.github.io/hari-krushna-solar/thankyou.html">
 
-                </select>
+    <!-- Honeypot Spam Protection -->
 
-                <textarea rows="5" placeholder="Message"></textarea>
+    <input type="text" name="_honey" style="display:none">
 
-                <button type="submit" class="btn btn-primary">
+    <!-- Customer Details -->
+<label>
+    Full Name <span class="required">*</span>
+</label>
+    <input
+        type="text"
+        name="Full Name"
+        placeholder="Full Name"
+        required>
+<label>
+    Mobile Number <span class="required">*</span>
+</label>
+    <input
+        type="tel"
+        name="Mobile Number"
+        placeholder="Mobile Number"
+        pattern="[0-9]{10}"
+        required>
+<label>
+    Email Address <span class="required">*</span>
+</label>
+    <input
+        type="email"
+        name="Email Address"
+        placeholder="Email Address"
+        required>
+<label>
+    Requirement <span class="required">*</span>
+</label>
+    <select name="Requirement" required>
 
-                    Get Free Quote
+        <option value="">Select Requirement</option>
 
-                </button>
+        <option>Residential Solar</option>
 
-            </form>
+        <option>Commercial Solar</option>
+
+        <option>Industrial Solar</option>
+
+        <option>Solar Subsidy</option>
+
+        <option>Free Site Visit</option>
+
+        <option>Other</option>
+
+    </select>
+<label>
+    Message
+    <small>(Optional)</small>
+</label>
+    <textarea
+        name="Message"
+        rows="5"
+        placeholder="Message (Optional)"></textarea>
+
+    <button type="submit" class="btn btn-primary">
+
+        Get Free Quote
+
+    </button>
+
+</form>
 
         </div>
 
