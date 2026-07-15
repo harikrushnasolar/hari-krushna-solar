@@ -258,3 +258,43 @@ min-width:220px;
 }
 
 }
+
+/* =========================
+   SERVICES MOBILE FIX
+========================= */
+
+@media (max-width:768px){
+
+.service-grid{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:25px !important;
+}
+
+.reverse{
+    display:flex !important;
+    flex-direction:column !important;
+}
+
+.service-image{
+    order:1 !important;
+}
+
+.service-content{
+    order:2 !important;
+    padding:0 !important;
+}
+
+.service-image img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.service-content h2{
+    font-size:32px;
+    line-height:1.3;
+}
+
+}

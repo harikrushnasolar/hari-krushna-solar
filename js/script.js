@@ -1,123 +1,141 @@
-console.log("Script Loaded");
-console.log("Hari Krushna Solar Website Loaded Successfully");
-// Back To Top
+// ===============================
+// BACK TO TOP
+// ===============================
 
 const backToTop = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
+if (backToTop) {
 
-    if (window.scrollY > 300) {
+    window.addEventListener("scroll", () => {
 
-        backToTop.style.display = "flex";
+        if (window.scrollY > 300) {
 
-    } else {
+            backToTop.style.display = "flex";
 
-        backToTop.style.display = "none";
+        } else {
 
-    }
-
-});
-
-backToTop.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
-
-});
-/* Sticky Header */
-
-const header = document.querySelector(".header");
-
-window.addEventListener("scroll", function(){
-
-    if(window.scrollY > 80){
-
-        header.classList.add("sticky");
-
-    }else{
-
-        header.classList.remove("sticky");
-
-    }
-
-});
-/* ==========================
-   COUNTER
-========================== */
-
-const counters = document.querySelectorAll(".counter");
-
-counters.forEach(counter => {
-
-    const target = Number(counter.dataset.target);
-
-    let count = 0;
-
-    const updateCounter = () => {
-
-        const increment = Math.max(1, Math.ceil(target / 100));
-
-        if (count < target) {
-
-            count += increment;
-
-            if (count > target) count = target;
-
-            if (counter.classList.contains("percent")) {
-
-                counter.innerHTML = count + "%";
-
-            } else if (target === 5) {
-
-                counter.innerHTML = count + " MW+";
-
-            } else {
-
-                counter.innerHTML = count + "+";
-
-            }
-
-            requestAnimationFrame(updateCounter);
+            backToTop.style.display = "none";
 
         }
 
-    };
+    });
 
-    updateCounter();
+    backToTop.addEventListener("click", () => {
 
-});
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+// ===============================
+// STICKY HEADER
+// ===============================
+
+const header = document.querySelector(".header");
+
+if (header) {
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 80) {
+
+            header.classList.add("sticky");
+
+        } else {
+
+            header.classList.remove("sticky");
+
+        }
+
+    });
+
+}
+
+// ===============================
+// COUNTER
+// ===============================
+
+const counters = document.querySelectorAll(".counter");
+
+if (counters.length > 0) {
+
+    counters.forEach(counter => {
+
+        const target = Number(counter.dataset.target);
+
+        let count = 0;
+
+        const updateCounter = () => {
+
+            const increment = Math.max(1, Math.ceil(target / 100));
+
+            if (count < target) {
+
+                count += increment;
+
+                if (count > target) count = target;
+
+                if (counter.classList.contains("percent")) {
+
+                    counter.innerHTML = count + "%";
+
+                } else if (target === 5) {
+
+                    counter.innerHTML = count + " MW+";
+
+                } else {
+
+                    counter.innerHTML = count + "+";
+
+                }
+
+                requestAnimationFrame(updateCounter);
+
+            }
+
+        };
+
+        updateCounter();
+
+    });
+
+}
+
+// ===============================
+// MOBILE MENU
+// ===============================
 
 const menuBtn = document.querySelector(".mobile-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 const overlay = document.querySelector(".menu-overlay");
 const closeBtn = document.querySelector(".close-menu");
 
-function openMenu(){
+function openMenu() {
 
-    mobileMenu.classList.add("active");
-    overlay.classList.add("active");
-
-}
-
-function closeMenu(){
-
-    mobileMenu.classList.remove("active");
-    overlay.classList.remove("active");
+    if (mobileMenu) mobileMenu.classList.add("active");
+    if (overlay) overlay.classList.add("active");
 
 }
 
-menuBtn.addEventListener("click", openMenu);
+function closeMenu() {
 
-closeBtn.addEventListener("click", closeMenu);
+    if (mobileMenu) mobileMenu.classList.remove("active");
+    if (overlay) overlay.classList.remove("active");
 
-overlay.addEventListener("click", closeMenu);
+}
 
-document.querySelectorAll(".mobile-menu a").forEach(link=>{
+if (menuBtn) menuBtn.addEventListener("click", openMenu);
+if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+if (overlay) overlay.addEventListener("click", closeMenu);
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
 
     link.addEventListener("click", closeMenu);
 

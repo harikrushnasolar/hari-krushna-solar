@@ -6,50 +6,55 @@ emailjs.init({
     publicKey: "pn-LVDvRW6geg-tAg",
 });
 
+// Contact Form
 const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", function (e) {
+// Page પર contact form હોય તો જ code ચલાવો
+if (contactForm) {
 
-    e.preventDefault();
+    contactForm.addEventListener("submit", function (e) {
 
-    const submitBtn = contactForm.querySelector("button");
+        e.preventDefault();
 
-    const originalText = submitBtn.innerHTML;
+        const submitBtn = contactForm.querySelector("button");
 
-    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        const originalText = submitBtn.innerHTML;
 
-    submitBtn.disabled = true;
+        submitBtn.innerHTML =
+            '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
 
-    emailjs.sendForm(
-        "service_vi9futv",
-        "template_gjmp0ms",
-        contactForm
-    )
+        submitBtn.disabled = true;
 
-    .then(() => {
+        emailjs.sendForm(
+            "service_vi9futv",
+            "template_gjmp0ms",
+            contactForm
+        )
 
-        contactForm.reset();
+        .then(() => {
 
-        window.location.href = "thankyou.html";
+            contactForm.reset();
 
-    })
+            window.location.href = "thankyou.html";
 
-    .catch((error) => {
+        })
 
-        console.error(error);
+        .catch((error) => {
 
-        alert("❌ Failed to send inquiry. Please try again.");
+            console.error(error);
 
-    })
+            alert("❌ Failed to send inquiry. Please try again.");
 
-    .finally(() => {
+        })
 
-        submitBtn.innerHTML = originalText;
+        .finally(() => {
 
-        submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+
+            submitBtn.disabled = false;
+
+        });
 
     });
 
-});
-
-
+}

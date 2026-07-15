@@ -1,29 +1,34 @@
 const button = document.getElementById("calculateBtn");
 
-button.addEventListener("click",()=>{
+// Calculator હોય ત્યારે જ code ચલાવો
+if (button) {
 
-    const bill = Number(document.getElementById("bill").value);
+    button.addEventListener("click", () => {
 
-    if(!bill){
+        const bill = Number(document.getElementById("bill").value);
 
-        alert("Please enter your monthly electricity bill.");
+        if (!bill) {
 
-        return;
+            alert("Please enter your monthly electricity bill.");
 
-    }
+            return;
 
-    const kw = (bill/1500).toFixed(1);
+        }
 
-    const saving = bill*12;
+        const kw = (bill / 1500).toFixed(1);
 
-    const subsidy = kw>=3 ? 78000 : 30000;
+        const saving = bill * 12;
 
-    document.getElementById("systemSize").innerHTML = kw+" kW";
+        const subsidy = kw >= 3 ? 78000 : 30000;
 
-    document.getElementById("annualSaving").innerHTML =
-    "Estimated Annual Saving : ₹"+saving.toLocaleString();
+        document.getElementById("systemSize").innerHTML = kw + " kW";
 
-    document.getElementById("subsidy").innerHTML =
-    "Estimated Subsidy : ₹"+subsidy.toLocaleString();
+        document.getElementById("annualSaving").innerHTML =
+            "Estimated Annual Saving : ₹" + saving.toLocaleString();
 
-});
+        document.getElementById("subsidy").innerHTML =
+            "Estimated Subsidy : ₹" + subsidy.toLocaleString();
+
+    });
+
+}
