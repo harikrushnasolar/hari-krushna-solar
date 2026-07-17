@@ -1084,14 +1084,21 @@ width: 55px;
     height:48px;
     background:#0A3D91;
     color:#fff;
+    border:none;
     border-radius:12px;
     cursor:pointer;
     font-size:24px;
-    transition:.3s;
+    transition:.3s ease;
+    box-shadow:0 8px 20px rgba(10,61,145,.20);
 }
 
 .mobile-toggle:hover{
     background:#082F75;
+}
+
+.mobile-toggle i{
+    color:#fff;
+    font-size:22px;
 }
 
 .header-buttons{
@@ -1186,6 +1193,8 @@ color:#0A3D91;
 
 }
 
+
+@media (max-width:991px){
 
 /* ==========================
    MOBILE MENU
@@ -1474,6 +1483,8 @@ grid-template-columns:1fr;
     font-weight:700;
 }
 
+@media(max-width:991px){
+
 .services-grid{
     grid-template-columns:1fr;
 }
@@ -1482,6 +1493,7 @@ grid-template-columns:1fr;
     padding:30px 20px;
 }
 
+}
 /* ==========================================
    THANK YOU PAGE
 ========================================== */
