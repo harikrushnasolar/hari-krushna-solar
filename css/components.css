@@ -731,13 +731,25 @@
 
 }
 
-.footer p,
-.footer li{
-
+.footer p{
+    display:flex;
+    align-items:center;
+    gap:10px;
     color:#d1d5db;
-
     line-height:1.9;
+    margin-bottom:14px;
+}
 
+.footer li{
+    color:#d1d5db;
+    line-height:1.9;
+}
+
+.footer p i{
+    width:20px;
+    color:var(--secondary-color);
+    text-align:center;
+    flex-shrink:0;
 }
 
 .footer ul{
@@ -1033,7 +1045,7 @@
 .cta .btn-secondary{
     background:#FFC107;
     color:#111827;
-    gap: 10px;
+gap: 10px;
 
 }
 /* ==========================================

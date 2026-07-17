@@ -98,3 +98,62 @@
     }
 
 }
+
+/*==========================================
+  FOOTER MOBILE
+==========================================*/
+
+@media (max-width:768px){
+
+    .footer{
+        padding:60px 0 25px;
+    }
+
+    .footer-grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:35px 25px;
+        text-align:left;
+    }
+
+    .footer-grid > div:first-child{
+        grid-column:1 / -1;
+        text-align:center;
+    }
+
+    .footer-logo{
+        margin:0 auto 18px;
+    }
+
+    .footer-grid > div:first-child p{
+        max-width:320px;
+        margin:0 auto;
+        line-height:1.8;
+    }
+
+    .footer-grid h3{
+        font-size:1.5rem;
+        margin-bottom:18px;
+    }
+
+    .footer-grid ul{
+        padding:0;
+        margin:0;
+        list-style:none;
+    }
+
+    .footer-grid ul li{
+        margin-bottom:12px;
+    }
+
+    .footer-grid p{
+        line-height:1.8;
+    }
+
+    .footer-bottom{
+        margin-top:35px;
+        text-align:center;
+        font-size:.9rem;
+    }
+
+}

@@ -1,0 +1,353 @@
+/*==================================================
+    CONTACT PAGE
+==================================================*/
+
+/*==========================================
+  CONTACT HERO
+==========================================*/
+
+.contact-hero{
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0 30px;
+    background: linear-gradient(135deg,#0a3d91 0%,#1d4fb8 50%,#3b6ef5 100%);
+    color:#fff;
+}
+
+.contact-hero::before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    top:-250px;
+    right:-250px;
+}
+
+.contact-hero::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:rgba(255,255,255,.04);
+    bottom:-180px;
+    left:-180px;
+}
+
+.contact-hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact-hero .section-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 36px;
+    border-radius:999px;
+    background:#fff;
+    color:#0a3d91 !important;
+    font-weight:700;
+    margin-bottom:28px;
+}
+
+.contact-hero h1{
+    font-size:clamp(2.5rem,5vw,4rem);
+    font-weight:800;
+    color:#fff;
+    margin-bottom:18px;
+    line-height:1.15;
+}
+
+.contact-hero-gu{
+    max-width:760px;
+    margin:0 auto 12px;
+    font-size:1.25rem;
+    line-height:1.9;
+    color:rgba(255,255,255,.95);
+}
+
+.contact-hero-text{
+    max-width:700px;
+    margin:0 auto;
+    font-size:1.12rem;
+    line-height:1.9;
+    color:rgba(255,255,255,.90);
+}
+
+.contact-hero-buttons{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.contact-hero-buttons .btn{
+    min-width:190px;
+}
+
+/*==========================================
+  CONTACT SECTION
+==========================================*/
+
+.contact{
+    padding:100px 0;
+    background:#f8fbff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1.1fr;
+    gap:60px;
+    align-items:start;
+}
+
+.contact-info{
+    padding-right:20px;
+}
+
+.contact-info .section-tag{
+    display:inline-block;
+    padding:12px 28px;
+    background:#eaf2ff;
+    color:var(--primary-color);
+    border-radius:999px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.contact-info h2{
+    margin-bottom:20px;
+}
+
+.contact-info>p{
+    font-size:1.08rem;
+    line-height:1.9;
+    color:var(--text-light);
+    margin-bottom:40px;
+}
+
+.contact-item{
+    display:flex;
+    align-items:flex-start;
+    gap:22px;
+    margin-bottom:30px;
+}
+
+.contact-item i{
+    width:70px;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:var(--primary-color);
+    color:#fff;
+    font-size:1.5rem;
+    flex-shrink:0;
+}
+
+.contact-item h4{
+    margin-bottom:8px;
+    color:var(--heading-color);
+}
+
+.contact-item p{
+    margin:0;
+    color:var(--text-light);
+    line-height:1.8;
+}
+
+.contact-buttons{
+    display:flex;
+    gap:18px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.contact-buttons .btn{
+    min-width:180px;
+}
+
+.contact-form{
+    background:#fff;
+    padding:45px;
+    border-radius:24px;
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.contact-form label{
+    font-weight:600;
+    color:var(--heading-color);
+    margin-bottom:8px;
+    display:block;
+}
+
+.contact-form .required{
+    color:#ff4d4f;
+}
+
+.contact-form small{
+    color:#777;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+    width:100%;
+    padding:18px 20px;
+    border:1px solid #dcdcdc;
+    border-radius:14px;
+    outline:none;
+    font-size:1rem;
+    transition:.3s;
+    background:#fff;
+}
+
+.contact-form textarea{
+    resize:vertical;
+    min-height:160px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+    border-color:var(--primary-color);
+    box-shadow:0 0 0 4px rgba(10,61,145,.10);
+}
+
+.contact-form button{
+    width:100%;
+    margin-top:10px;
+}
+
+/*==========================================
+  GOOGLE MAP
+==========================================*/
+
+.contact-map{
+    padding:100px 0;
+    background:#fff;
+}
+
+.contact-map .section-title{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 60px;
+}
+
+.map-wrapper{
+    overflow:hidden;
+    border-radius:24px;
+    background:#fff;
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+}
+
+.map-wrapper iframe{
+    display:block;
+    width:100%;
+    height:500px;
+    border:0;
+}
+
+/*==========================================
+  CONTACT PAGE CTA
+==========================================*/
+
+.contact-page .services-final-cta{
+    margin-top:0;
+}
+
+/*==========================================
+  CONTACT PAGE RESPONSIVE
+==========================================*/
+
+@media (max-width:991px){
+
+    .contact-hero{
+        padding:110px 0 80px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .contact-info{
+        padding-right:0;
+    }
+
+    .contact-form{
+        padding:35px;
+    }
+
+    .map-wrapper iframe{
+        height:420px;
+    }
+
+}
+
+@media (max-width:767px){
+
+    .contact-hero{
+        padding:90px 0 70px;
+    }
+
+    .contact-hero h1{
+        font-size:2.2rem;
+    }
+
+    .contact-hero-gu,
+    .contact-hero-text{
+        font-size:1rem;
+    }
+
+    .contact-hero-buttons{
+        flex-direction:column;
+    }
+
+    .contact-hero-buttons .btn,
+    .contact-buttons .btn{
+        width:100%;
+    }
+
+    .contact{
+        padding:80px 0;
+    }
+
+    .contact-form{
+        padding:25px;
+    }
+
+    .contact-item{
+        gap:18px;
+    }
+
+    .contact-item i{
+        width:60px;
+        height:60px;
+        font-size:1.3rem;
+    }
+
+    .map-wrapper{
+        border-radius:18px;
+    }
+
+    .map-wrapper iframe{
+        height:350px;
+    }
+
+}
