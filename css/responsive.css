@@ -157,3 +157,51 @@
     }
 
 }
+
+/* Mobile Header Branding */
+@media (max-width:768px){
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:58px;
+    height:auto;
+}
+
+.mobile-logo-text{
+    display:block;
+}
+
+.mobile-logo-text h2{
+    font-size:16px;
+    font-weight:700;
+    color:#071C3C;
+    line-height:1.1;
+    margin:0;
+}
+
+.mobile-logo-text p{
+    font-size:11px;
+    color:#666;
+    margin:2px 0 0;
+    line-height:1;
+}
+
+.navbar{
+    padding:0 15px;
+}
+
+}
+
+/* Desktop */
+@media (min-width:769px){
+
+.mobile-logo-text{
+    display:none;
+}
+
+}
