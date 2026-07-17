@@ -117,21 +117,39 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const overlay = document.querySelector(".menu-overlay");
 const closeBtn = document.querySelector(".close-menu");
 
-function openMenu() {
+function openMenu(){
 
-    if (mobileMenu) mobileMenu.classList.add("active");
-    if (overlay) overlay.classList.add("active");
+    mobileMenu.classList.add("active");
 
-}
-
-function closeMenu() {
-
-    if (mobileMenu) mobileMenu.classList.remove("active");
-    if (overlay) overlay.classList.remove("active");
+    overlay.classList.add("active");
 
 }
 
-if (menuBtn) menuBtn.addEventListener("click", openMenu);
+function closeMenu(){
+
+    mobileMenu.classList.remove("active");
+
+    overlay.classList.remove("active");
+
+}
+
+if (menuBtn) {
+
+    menuBtn.addEventListener("click", () => {
+
+        if (mobileMenu.classList.contains("active")) {
+
+            closeMenu();
+
+        } else {
+
+            openMenu();
+
+        }
+
+    });
+
+}
 if (closeBtn) closeBtn.addEventListener("click", closeMenu);
 if (overlay) overlay.addEventListener("click", closeMenu);
 

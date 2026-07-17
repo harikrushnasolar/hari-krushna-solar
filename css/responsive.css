@@ -258,6 +258,30 @@ min-width:220px;
 }
 
 }
+    .mobile-toggle{
+
+        display:flex !important;
+
+    }
+
+    .header{
+
+    top:0 !important;
+
+}
+
+body{
+
+    padding-top:80px !important;
+
+}
+
+.topbar{
+
+    display:none !important;
+
+}
+
 
 /* =========================
    SERVICES MOBILE FIX
@@ -325,15 +349,35 @@ min-width:220px;
 
 }
 
-/* ==========================
-   Mobile
-========================== */
+/* ==========================================
+   MOBILE HEADER FIX
+========================================== */
 
 @media (max-width:991px){
 
-    .mobile-toggle{
+    .topbar{
 
-        display:flex !important;
+        display:none !important;
+
+    }
+
+    body{
+
+        padding-top:80px !important;
+
+    }
+
+    .header{
+
+        position:fixed !important;
+
+        top:0 !important;
+
+        left:0;
+
+        width:100%;
+
+        z-index:99999;
 
     }
 
