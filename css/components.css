@@ -1033,6 +1033,8 @@
 .cta .btn-secondary{
     background:#FFC107;
     color:#111827;
+    gap: 10px;
+
 }
 /* ==========================================
    PREMIUM MOBILE NAVBAR

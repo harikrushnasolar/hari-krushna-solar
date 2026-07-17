@@ -699,6 +699,7 @@ justify-content:center;
 .about-final-buttons .btn{
 
     min-width:220px;
+    gap: 10px;
 
 }
 

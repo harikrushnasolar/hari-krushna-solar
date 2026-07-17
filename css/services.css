@@ -465,6 +465,7 @@ grid-template-columns:1fr;
 .services-cta-buttons .btn{
 
     min-width:220px;
+    gap: 10px;
 
 }
 

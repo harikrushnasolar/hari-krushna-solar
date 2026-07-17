@@ -125,6 +125,8 @@ section{
 
     cursor:pointer;
 
+    gap: 10px;
+
 }
 
 .btn-primary{
