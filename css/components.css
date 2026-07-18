@@ -1684,3 +1684,9 @@ body{
 .hero-image img:hover{
     transform:scale(1.02);
 }
+
+@media (max-width: 768px) {
+    .mobile-menu .btn.btn-primary {
+        color: #fff !important;
+    }
+}
