@@ -175,17 +175,21 @@ content="https://harikrushnasolar.in/images/hero/solar-house.jpg">
 
             </div>
 
-            <div class="top-right">
-
-                <i class="fa-solid fa-location-dot"></i>
-
-                <span>Surat, Gujarat</span>
+            <div class="google-link">
+    <a href="https://www.google.com/search?q=Hari+Krushna+Solar+%26+Rooftop"
+       target="_blank"
+       rel="noopener noreferrer">
+        <i class="fa-solid fa-location-dot"></i>
+        Surat, Gujarat
+    </a>
+</div>
 
             </div>
 
         </div>
 
     </div>
+    
 <!-- ==========================
      HEADER
 ========================== -->
@@ -197,13 +201,16 @@ content="https://harikrushnasolar.in/images/hero/solar-house.jpg">
         <!-- Logo -->
 <a href="index.html" class="logo">
 
-    <img src="assets/logos/logo.png" alt="Hari Krushna Solar & Rooftop Logo" loading="lazy"
+    <img src="assets/logos/hk logo.png" alt="Hari Krushna Solar & Rooftop Logo" loading="lazy"
 decoding="async">
 
-    <div class="mobile-logo-text">
-        <h2>Hari Krushna </h2>
-        <p>Solar & Rooftop</p>
-    </div>
+<div class="mobile-logo-text">
+    <img
+        src="assets/logos/mobile-brand-name.png"
+        alt="Hari Krushna Solar & Rooftop"
+        class="mobile-brand-name"
+    >
+</div>
 
 </a>
 
@@ -291,13 +298,28 @@ decoding="async">
     
     <div class="mobile-contact">
 
-        <p><i class="fa-solid fa-phone"></i> +91 78599 10495</p>
+    <div class="mobile-contact-phone">
+        <i class="fa-solid fa-phone"></i>
 
-        <p><i class="fa-solid fa-envelope"></i> hksolar.rooftop@gmail.com</p>
-
-        <p><i class="fa-solid fa-location-dot"></i> Surat, Gujarat</p>
-
+        <div class="mobile-phone-numbers">
+            <a href="tel:+917859910495">+91 78599 10495</a>
+            <a href="tel:+919313202910">+91 93132 02910</a>
+        </div>
     </div>
+
+    <p>
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:hksolar.rooftop@gmail.com">
+            hksolar.rooftop@gmail.com
+        </a>
+    </p>
+
+    <p class="mobile-contact-address">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Shop No. 214, Crystal Plaza, Opp. Devidarshan Society, Punagam, Surat, Gujarat - 395010</span>
+    </p>
+
+</div>
 
 </div>
 <div class="menu-overlay"></div>
@@ -460,8 +482,8 @@ decoding="async">
 decoding="async">
 </a>
 
-<a href="https://www.tatapowersolar.com/" target="_blank" class="brand-card">
-    <img src="images/brands/tata.jpg" alt="Tata Power Solar"loading="lazy"
+<a href="https://www.goldisolar.com//" target="_blank" class="brand-card">
+    <img src="images/brands/goldi.png" alt="Tata Power Solar"loading="lazy"
 decoding="async">
 </a>
 
@@ -470,8 +492,8 @@ decoding="async">
 decoding="async">
 </a>
 
-<a href="https://solaryaan.com/" target="_blank" class="brand-card">
-    <img src="images/brands/solaryaan.jpg" alt="Solaryaan"loading="lazy"
+<a href="https://polycab.com/solar/c/" target="_blank" class="brand-card">
+    <img src="images/brands/polycab.webp" alt="Solaryaan"loading="lazy"
 decoding="async">
 </a>
         </div>
@@ -998,7 +1020,7 @@ decoding="async">
 
                     <h4>Office</h4>
 
-                    <p>Surat, Gujarat, India</p>
+                    <p>214, Crystal Plaza, Opp. Devi Darhan Soc, Silver Chowk, Punagam, Surat, Gujarat 395010</p>
 
                 </div>
 
@@ -1235,19 +1257,23 @@ decoding="async">
 
             <h3>Contact Info</h3>
 
-<p>
-    <i class="fa-solid fa-phone"></i>
-    +91 78599 10495
-</p>
+<div class="contact-item">
+    <i class="fas fa-phone"></i>
+
+    <div class="footer-phone-list">
+        <a href="tel:+917859910495">+91 78599 10495</a>
+        <a href="tel:+919313202910">+91 93132 02910</a>
+    </div>
+</div>
 
 <p>
     <i class="fa-solid fa-envelope"></i>
-    hksolar.rooftop@gmail.com
+    <a href="mailto:hksolar.rooftop@gmail.com">hksolar.rooftop@gmail.com</a>
 </p>
 
 <p>
     <i class="fa-solid fa-location-dot"></i>
-    Surat, Gujarat
+    214, Crystal Plaza, Opp. Devi Darhan Soc, Silver Chowk, Punagam, Surat, Gujarat 395010
 </p>
 
         </div>
@@ -1289,14 +1315,13 @@ decoding="async">
 <script src="js/script.js" defer></script>
 <script src="js/calculator.js" defer></script>
 <script src="js/contact.js" defer></script>
-<script defer src="js/security.js"></script>
 <script src="js/analytics.js" defer></script>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
 AOS.init({
-    duration:1000,
+    duration:0,
     once:true
 });
 </script>

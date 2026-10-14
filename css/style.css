@@ -43,8 +43,8 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: auto;
 }
 
 body{
@@ -171,8 +171,10 @@ section{
     max-width:700px;
 
 }
-html,
-body{
-    overflow-x:hidden;
+html {
+    overflow-x: clip;
 }
 
+body {
+    overflow-x: clip;
+}
