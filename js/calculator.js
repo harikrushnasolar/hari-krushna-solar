@@ -1,21 +1,61 @@
+
 const button = document.getElementById("calculateBtn");
+const whatsappButton = document.getElementById("calculatorWhatsApp");
 
-// Calculator હોય ત્યારે જ code ચલાવો
 if (button) {
-
     button.addEventListener("click", () => {
+        const billInput = document.getElementById("bill");
+        const bill = Number(billInput?.value);
 
-        const bill = Number(document.getElementById("bill").value);
+        const systemSize = document.getElementById("systemSize");
+        const annualSaving = document.getElementById("annualSaving");
+        const subsidyResult = document.getElementById("subsidy");
 
-        if (!bill || bill <= 0) {
-            alert("Please enter your monthly electricity bill.");
+        if (!Number.isFinite(bill) || bill <= 0) {
+            alert("Please enter a valid monthly electricity bill.");
+
+            if (whatsappButton) {
+                whatsappButton.style.display = "none";
+            }
+
+            return;
+        }
+
+        if (!systemSize || !annualSaving || !subsidyResult) {
+            console.error("Solar calculator result elements are missing.");
             return;
         }
 
         let kw = 0;
-        let subsidy = 0;
+        let estimatedSubsidy = 0;
 
-        // Residential (Up to ₹10,000 Bill)
+        // Bills above ₹10,000 need a customized assessment.
+        if (bill > 10000) {
+            systemSize.textContent = "Customized Solar System";
+
+            annualSaving.textContent =
+                "Savings depend on electricity usage, tariff and system capacity.";
+
+            subsidyResult.textContent =
+                "Commercial/industrial projects require a separate assessment. Residential subsidy eligibility does not automatically apply.";
+
+            if (whatsappButton) {
+                const message =
+                    `Hello Hari Krushna Solar & Rooftop!\n` +
+                    `My monthly electricity bill is ₹${bill.toLocaleString("en-IN")}.\n` +
+                    `I need a customized solar quotation.\n` +
+                    `Please contact me for a site survey.`;
+
+                whatsappButton.href =
+                    `https://wa.me/917859910495?text=${encodeURIComponent(message)}`;
+
+                whatsappButton.style.display = "inline-flex";
+            }
+
+            return;
+        }
+
+        // Preliminary system-size estimate based on monthly bill.
         if (bill <= 1000) kw = 1;
         else if (bill <= 2000) kw = 2;
         else if (bill <= 3000) kw = 3;
@@ -25,40 +65,37 @@ if (button) {
         else if (bill <= 7000) kw = 7;
         else if (bill <= 8000) kw = 8;
         else if (bill <= 9000) kw = 9;
-        else if (bill <= 10000) kw = 10;
+        else kw = 10;
 
-        const saving = bill * 12;
+        // Illustrative savings only; actual savings depend on usage and tariff.
+        const estimatedAnnualSaving = bill * 12 * 0.7;
 
-        if (kw >= 3) {
-            subsidy = 78000;
-        } else {
-            subsidy = 30000;
+        // Potential central residential subsidy estimate, subject to eligibility.
+        if (kw === 1) estimatedSubsidy = 30000;
+        else if (kw === 2) estimatedSubsidy = 60000;
+        else estimatedSubsidy = 78000;
+
+        systemSize.textContent =
+            `Approx. ${kw} kW (preliminary estimate)`;
+
+        annualSaving.textContent =
+            `Illustrative Annual Saving: ₹${Math.round(estimatedAnnualSaving).toLocaleString("en-IN")} (actual savings may vary)`;
+
+        subsidyResult.textContent =
+            `Potential Residential Subsidy: Up to ₹${estimatedSubsidy.toLocaleString("en-IN")}. Subject to eligibility and approval.`;
+
+        // Show WhatsApp quotation button after calculation.
+        if (whatsappButton) {
+            const message =
+                `Hello Hari Krushna Solar & Rooftop!\n` +
+                `My monthly electricity bill is ₹${bill.toLocaleString("en-IN")}.\n` +
+                `Estimated solar system: ${kw} kW.\n` +
+                `Please provide a solar quotation.`;
+
+            whatsappButton.href =
+                `https://wa.me/917859910495?text=${encodeURIComponent(message)}`;
+
+            whatsappButton.style.display = "inline-flex";
         }
-
-        // Commercial / Industrial
-        if (bill > 10000) {
-
-            document.getElementById("systemSize").innerHTML =
-                "Commercial / Industrial Solution";
-
-            document.getElementById("annualSaving").innerHTML =
-                "For electricity bills above ₹10,000/month, we recommend a customized commercial solar system.";
-
-            document.getElementById("subsidy").innerHTML =
-                "📞 Contact Hari Krushna Solar & Rooftop for a Free Site Survey & Quotation.";
-
-        } else {
-
-            document.getElementById("systemSize").innerHTML = kw + " kW";
-
-            document.getElementById("annualSaving").innerHTML =
-                "Estimated Annual Saving : ₹" + saving.toLocaleString();
-
-            document.getElementById("subsidy").innerHTML =
-                "Estimated Subsidy : ₹" + subsidy.toLocaleString();
-
-        }
-
     });
-
 }
