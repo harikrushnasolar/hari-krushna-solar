@@ -1881,3 +1881,25 @@ body{
         min-width: 0;
     }
 }
+
+/* Mobile contact icons - clean alignment */
+@media (max-width: 768px) {
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .contact-item > i {
+        width: 28px;
+        min-width: 28px;
+        height: auto;
+        background: transparent;
+        border-radius: 0;
+        color: #0A3D91;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
