@@ -1827,7 +1827,7 @@ body{
 @media (max-width: 768px) {
     .contact-item > i {
         width: 48px;
-        height: auto;
+        height: 48px;
         min-width: 48px;
         font-size: 20px;
         display: flex;
