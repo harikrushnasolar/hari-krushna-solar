@@ -1827,7 +1827,7 @@ body{
 @media (max-width: 768px) {
     .contact-item > i {
         width: 48px;
-        height: 48px;
+        height: auto;
         min-width: 48px;
         font-size: 20px;
         display: flex;
@@ -1846,4 +1846,38 @@ body{
 .contact-item > i {
     align-self: center;
     flex-shrink: 0;
+}
+
+
+/* Footer contact alignment fix for mobile */
+@media (max-width: 768px) {
+    footer .contact-item,
+    .footer .contact-item,
+    .footer-contact .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    footer .contact-item > i,
+    .footer .contact-item > i,
+    .footer-contact .contact-item > i {
+        flex: 0 0 24px;
+        width: 24px;
+        min-width: 24px;
+        height: auto;
+        align-self: center;
+        background: transparent;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+
+    footer .contact-item > div,
+    .footer .contact-item > div,
+    .footer-contact .contact-item > div {
+        flex: 1;
+        min-width: 0;
+    }
 }
