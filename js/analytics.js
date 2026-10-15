@@ -63,7 +63,7 @@
             window.location.pathname
                 .split("/")
                 .pop()
-                .toLowerCase() || "index.html";
+                .toLowerCase() || "index";
 
         trackEvent("page_loaded", {
             page: currentPage
