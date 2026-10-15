@@ -153,7 +153,7 @@
             });
         // ==========================================
         // Contact Form Tracking
-        // contact.html
+        // contact
         // ==========================================
 
         const contactForm =

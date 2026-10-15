@@ -8,25 +8,25 @@
   </url>
 
   <url>
-    <loc>https://harikrushnasolar.in/about.html</loc>
+    <loc>https://harikrushnasolar.in/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://harikrushnasolar.in/services.html</loc>
+    <loc>https://harikrushnasolar.in/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://harikrushnasolar.in/projects.html</loc>
+    <loc>https://harikrushnasolar.in/projects</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://harikrushnasolar.in/contact.html</loc>
+    <loc>https://harikrushnasolar.in/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
