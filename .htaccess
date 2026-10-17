@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /hari-krushna-solar-git/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(about|services|projects|contact)/?$ $1.html [L]
