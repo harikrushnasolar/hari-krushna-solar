@@ -1508,7 +1508,9 @@ font-size:28px;
 }
 
 .service-card img{
-    width:90px;
+    width:160px;
+    height:auto;
+    max-width:100%;
 }
 
 .service-card h3{
