@@ -59,53 +59,71 @@ if (header) {
 }
 
 // ===============================
-// COUNTER
-// ===============================
+// COUNTER — Start when stats section enters viewport
+// ================================================
 
 const counters = document.querySelectorAll(".counter");
+const statsSection = document.querySelector("#stats-section");
 
-if (counters.length > 0) {
+if (counters.length > 0 && statsSection) {
 
-    counters.forEach(counter => {
+    let countersStarted = false;
 
-        const target = Number(counter.dataset.target);
+    const startCounters = () => {
 
-        let count = 0;
+        if (countersStarted) return;
+        countersStarted = true;
 
-        const updateCounter = () => {
+        counters.forEach(counter => {
 
-            const increment = Math.max(1, Math.ceil(target / 100));
+            const target = Number(counter.dataset.target);
+            let count = 0;
 
-            if (count < target) {
+            const updateCounter = () => {
 
-                count += increment;
+                const increment = Math.max(1, Math.ceil(target / 100));
 
-                if (count > target) count = target;
+                if (count < target) {
 
-                if (counter.classList.contains("percent")) {
+                    count += increment;
 
-                    counter.innerHTML = count + "%";
+                    if (count > target) count = target;
 
-                } else if (target === 5) {
+                    if (counter.classList.contains("percent")) {
+                        counter.textContent = count + "%";
+                    } else if (target === 5) {
+                        counter.textContent = count + " MW+";
+                    } else {
+                        counter.textContent = count + "+";
+                    }
 
-                    counter.innerHTML = count + " MW+";
-
-                } else {
-
-                    counter.innerHTML = count + "+";
-
+                    if (count < target) {
+                        requestAnimationFrame(updateCounter);
+                    }
                 }
+            };
 
-                requestAnimationFrame(updateCounter);
+            updateCounter();
+        });
 
+        observer.disconnect();
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                startCounters();
             }
 
-        };
+        });
 
-        updateCounter();
-
+    }, {
+        threshold: 0.25
     });
 
+    observer.observe(statsSection);
 }
 
 // ===============================

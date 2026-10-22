@@ -748,3 +748,33 @@ max-width:320px;
 }
 
 }
+
+
+/* About page banner decorative circle */
+.page-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-banner::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .06);
+    top: -180px;
+    right: -140px;
+    pointer-events: none;
+}
+.page-banner::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .04);
+    bottom: -250px;
+    left: -180px;
+    pointer-events: none;
+}

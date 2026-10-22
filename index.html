@@ -458,7 +458,7 @@ content="https://harikrushnasolar.in/images/hero/solar-house.webp">
 
     <div class="container">
 
-        <div class="hero-stats">
+        <div class="hero-stats" id="stats-section" data-aos="fade-up">
 
             <div class="stat-card">
 
@@ -1420,6 +1420,19 @@ decoding="async">
 <script src="js/contact.js" defer></script>
 <script src="js/analytics.js" defer></script>
 
+
+<!-- AOS Animation JS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 120,
+        startEvent: 'DOMContentLoaded'
+    });
+</script>
 
 
 </body>

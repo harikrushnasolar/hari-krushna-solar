@@ -351,3 +351,26 @@
     }
 
 }
+
+
+.contact-info i,
+.contact-info .fas,
+.contact-info .fa-solid,
+.contact-info .fa {
+    color: white !important;
+}
+
+/* Contact Info — Blue Circular Icons */
+.contact-item i {
+    width: 68px;
+    height: 68px;
+    min-width: 68px;
+    border-radius: 50%;
+    background-color: var(--primary-color, #10469b);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}

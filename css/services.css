@@ -717,3 +717,21 @@ max-width:320px;
 }
 
 }
+
+/* Services CTA bottom decorative circle */
+.services-final-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.services-final-box::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .04);
+    bottom: -250px;
+    left: -180px;
+    pointer-events: none;
+}
