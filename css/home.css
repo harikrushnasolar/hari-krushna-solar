@@ -2141,3 +2141,180 @@ body{
     src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/webfonts/fa-brands-400.woff2")
          format("woff2");
 }
+
+/* CTA Banner — Decorative Blue Bubble */
+.cta {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.cta::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    top: -180px;
+    right: -140px;
+    z-index: -1;
+    pointer-events: none;
+}
+/* CTA Banner — Bottom Left Bubble */
+.cta::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    bottom: -150px;
+    left: -100px;
+    z-index: -1;
+    pointer-events: none;
+}
+/* White outer background */
+.cta {
+    background: #ffffff;
+    padding: 40px 3%;
+}
+
+/* Blue CTA box */
+.cta .cta-box {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    border-radius: 38px;
+    background: linear-gradient(115deg, #12469f, #2860ed);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+/* Bubble shapes stay inside blue box */
+.cta .cta-box::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    top: -190px;
+    right: -120px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.cta .cta-box::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    bottom: -210px;
+    left: -120px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .cta {
+        padding: 24px 14px;
+    }
+
+    .cta .cta-box {
+        padding: 48px 20px;
+        border-radius: 26px;
+    }
+
+    .cta .cta-box::before,
+    .cta .cta-box::after {
+        width: 220px;
+        height: 220px;
+    }
+}
+/* Desktop only: CTA buttons slightly left */
+@media (min-width: 769px) {
+    .cta .cta-buttons {
+        transform: translateX(-125px);
+    }
+}
+/* Contact CTA — Desktop only */
+@media (min-width: 769px) {
+    .cta .cta-box {
+        max-width: 1250px;
+        margin: 0 auto;
+        padding: 55px 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 22px;
+    }
+
+    .cta .cta-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta .cta-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        transform: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .cta .cta-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta .cta-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta .cta-content .section-tag,
+    .cta .cta-content h2,
+    .cta .cta-content p {
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta .cta-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+        transform: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .cta .cta-content .section-tag {
+        display: inline-block;
+        width: fit-content;
+        max-width: max-content;
+        padding: 12px 28px;
+        border-radius: 999px;
+        margin: 0 auto 25px;
+        align-self: center;
+    }
+}

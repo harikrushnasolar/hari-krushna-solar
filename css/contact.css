@@ -374,3 +374,21 @@
     font-size: 24px;
     flex-shrink: 0;
 }
+/* Contact page — Mobile simple blue icons */
+@media (max-width: 768px) {
+
+    .contact-info .contact-item i {
+        width: auto !important;
+        height: auto !important;
+        min-width: 0 !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        color: #10469b !important;
+        font-size: 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+}
